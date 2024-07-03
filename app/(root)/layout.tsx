@@ -1,30 +1,39 @@
-// import MobileNav from "@/components/MobileNav";
-// import Sidebar from "@/components/Sidebar";
-// import { getLoggedInUser } from "@/lib/actions/user.actions";
+import Sidebar from "@/components/Sidebar";
 import Image from "next/image";
-import { redirect } from "next/navigation";
+import MobileNav from "@/components/MobileNav";
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-//   const loggedIn = await getLoggedInUser();
-
-//   if(!loggedIn) redirect('/sign-in')
+  const loggedIn = {
+    $id: "123",
+    email: "adrian.jsm@example.com",
+    userId: "adrianjsm",
+    dwollaCustomerUrl: "https://example.com/dwolla/customer/123",
+    dwollaCustomerId: "123",
+    firstName: "Adrian",
+    lastName: "JSM",
+    address1: "123 Main St",
+    city: "Anytown",
+    state: "CA",
+    postalCode: "12345",
+    dateOfBirth: "01-01-1980",
+    ssn: "123-45-6789",
+  };
 
   return (
     <main className="flex h-screen w-full font-inter">
-      {/* <Sidebar user={loggedIn} /> */}
+      {/* Uncomment and use Sidebar if needed */}
+      <Sidebar user={loggedIn} />
 
-      <div className="flex size-full flex-col">
-        <div className="root-layout">
+      <div className="flex flex-grow flex-col">
+        <div className="root-layout flex items-center justify-between p-4">
           <Image src="/icons/logo.svg" width={30} height={30} alt="logo" />
-          <div>
-            {/* <MobileNav user={loggedIn} /> */}
-          </div>
+          <MobileNav user={loggedIn} />
         </div>
-        {children}
+        <div className="flex-grow">{children}</div>
       </div>
     </main>
   );
