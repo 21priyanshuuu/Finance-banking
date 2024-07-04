@@ -9,22 +9,32 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@hookform/resolvers": "^3.7.0",
     "@radix-ui/react-dialog": "^1.1.1",
     "add": "^2.0.6",
+    "button": "^1.1.1",
     "chart.js": "^4.4.3",
     "class-variance-authority": "^0.7.0",
+    "form": "^0.2.4",
     "http-proxy-middleware": "^3.0.0",
+    "input": "^1.0.1",
     "lucide-react": "^0.400.0",
     "next": "14.2.4",
+    "node-appwrite": "^13.0.0",
     "query-string": "^9.0.0",
     "radix-ui": "^1.0.1",
     "react": "^18",
     "react-chartjs-2": "^5.2.0",
     "react-countup": "^6.5.3",
     "react-dom": "^18",
+    "react-hook-form": "^7.52.1",
     "shadcn-ui": "^0.8.0",
     "sheet": "^0.2.0",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20",
